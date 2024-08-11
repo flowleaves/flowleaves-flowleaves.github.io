@@ -25,7 +25,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="定时关机&#x2F;重启小助手v1.0">
 <meta property="og:url" content="http://example.com/2024/08/08/%E5%AE%9A%E6%97%B6%E5%85%B3%E6%9C%BA-%E9%87%8D%E5%90%AF%E5%B0%8F%E5%8A%A9%E6%89%8B/index.html">
-<meta property="og:site_name" content="little的个人小站">
+<meta property="og:site_name" content="Argi的博客站">
 <meta property="og:description" content="配置环境 编码环境 ：pycharm + python 3.11   所用的库 ：tkinter、time、os、datetime 界面展示 下载链接https:&#x2F;&#x2F;wwi.lanzoue.com&#x2F;iSlJV26ukxgd  密码:djqd 源码分享编码过程较为简单，大家可以自行本地部署，并进行调整 1234567891011121314151617181920212223242526272829">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/leaveloft/leaveloft/raw/master/202408081200208.png">
@@ -41,7 +41,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>定时关机/重启小助手v1.0 - little的个人小站</title>
+  <title>定时关机/重启小助手v1.0 - Argi的博客站</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -79,7 +79,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":"ture","follow_dnt":true,"baidu":"cd25fc7c2588cd392a2a31e7b9dc87b3","google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"cd25fc7c2588cd392a2a31e7b9dc87b3","google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -129,7 +129,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>little的小站</strong>
+      <strong>Argi的博客站</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -159,8 +159,8 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archive/" target="_self">
-                <i class="iconfont icon-books"></i>
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
             </li>
@@ -171,8 +171,8 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/category/" target="_self">
-                <i class="iconfont icon-th-large"></i>
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
               </a>
             </li>
@@ -254,6 +254,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
+          <!-- compatible with older versions-->
           492 字
         
       </span>
@@ -265,6 +266,7 @@
         
         
         
+          <!-- compatible with older versions-->
           5 分钟
         
       </span>
