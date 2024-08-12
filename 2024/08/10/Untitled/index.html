@@ -16,18 +16,18 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="MR F">
+  <meta name="author" content="Argi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="2024年8月10日	美团笔试（技术卷）">
+    <meta name="description" content="2024年8月10日	美团笔试（技术卷）  Q1 :输入描述：第一行输入n，表示接下来有n数据，第二行输入标准答案tel  接下来n行输入n组数据问题：请你设计一个算法，从数据组中找到标准答案，数据会从长度小的开始遍历，长度相同的数据随机遍历，请问需要查询几次才能找到标准答案 且当之前遍历过的数据不会在遍历，如 以确认“ac”不是答案，后续将不再查询 “ac”输出描述：输出最少需要查询次数和最多">
 <meta property="og:type" content="article">
-<meta property="og:title" content="秋招随笔一">
+<meta property="og:title" content="2024年8月10日	美团笔试（技术卷）">
 <meta property="og:url" content="http://example.com/2024/08/10/Untitled/index.html">
 <meta property="og:site_name" content="Argi的博客站">
-<meta property="og:description" content="2024年8月10日	美团笔试（技术卷）">
+<meta property="og:description" content="2024年8月10日	美团笔试（技术卷）  Q1 :输入描述：第一行输入n，表示接下来有n数据，第二行输入标准答案tel  接下来n行输入n组数据问题：请你设计一个算法，从数据组中找到标准答案，数据会从长度小的开始遍历，长度相同的数据随机遍历，请问需要查询几次才能找到标准答案 且当之前遍历过的数据不会在遍历，如 以确认“ac”不是答案，后续将不再查询 “ac”输出描述：输出最少需要查询次数和最多">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-08-09T16:18:00.000Z">
-<meta property="article:modified_time" content="2024-08-11T17:15:45.317Z">
+<meta property="article:modified_time" content="2024-08-12T11:45:24.525Z">
 <meta property="article:author" content="MR F">
 <meta property="article:tag" content="笔试">
 <meta name="twitter:card" content="summary_large_image">
@@ -36,7 +36,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>秋招随笔一 - Argi的博客站</title>
+  <title>2024年8月10日	美团笔试（技术卷） - Argi的博客站</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -226,7 +226,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">秋招随笔一</span>
+            <span id="subtitle">2024年8月10日	美团笔试（技术卷）</span>
           
         </div>
 
@@ -249,7 +249,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          11 字
+          918 字
         
       </span>
     
@@ -260,7 +260,7 @@
         
         
         
-          1 分钟
+          8 分钟
         
       </span>
     
@@ -306,12 +306,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">秋招随笔一</h1>
+            <h1 id="seo-header">2024年8月10日	美团笔试（技术卷）</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年8月12日 凌晨
+                    本文最后更新于 2024年8月12日 晚上
                   
                 
               </p>
@@ -322,6 +322,79 @@
                 <blockquote>
 <p>2024年8月10日	美团笔试（技术卷）</p>
 </blockquote>
+<h2 id="Q1"><a href="#Q1" class="headerlink" title="Q1 :"></a>Q1 :</h2><p>输入描述：第一行输入n，表示接下来有n数据，第二行输入标准答案tel  接下来n行输入n组数据<br>问题：请你设计一个算法，从数据组中找到标准答案，数据会从长度小的开始遍历，长度相同的数据随机遍历，请问需要查询几次才能找到标准答案 且当之前遍历过的数据不会在遍历，如 以确认“ac”不是答案，后续将不再查询 “ac”<br>输出描述：输出最少需要查询次数和最多需要查询次数  </p>
+<h3 id="解决算法"><a href="#解决算法" class="headerlink" title="解决算法"></a>解决算法</h3><blockquote>
+<p>解题思路：<br>排序：首先按长度对数据进行排序，长度相同的数据保持原始顺序。<br>遍历查找：遍历数据列表，找到标准答案所在的位置，记录查询次数。</p>
+</blockquote>
+<pre><code class="hljs">def find_query_times(n, tel, data_list):
+  # 根据长度排序，长度相同的保持原始顺序
+  sorted_data = sorted(data_list, key=len)
+
+  min_queries = 0
+  max_queries = 0
+
+  for i, data in enumerate(sorted_data):
+</code></pre>
+<p>          max_queries +&#x3D; 1<br>          if data &#x3D;&#x3D; tel:<br>              min_queries &#x3D; max_queries<br>              break<br>      return min_queries, max_queries</p>
+<p>    #ACM模式模式下需要自行补一个输入输出</p>
+<h2 id="Q2："><a href="#Q2：" class="headerlink" title="Q2："></a>Q2：</h2><p>小美有一个长度为 n 的数组 a1,a2,….,an ，他可以对数组进行如下操作：<br>删除第一个元素 a1，同时数组的长度减一，花费为 x。<br>删除整个数组，花费为 k*MEX(a) （其中 MEX(a) 表示 a 中未出现过的最小非负整数。例如 [0,1,2,4] 的 MEX 为 3 ）。<br>小美想知道将 a 数组全部清空的最小代价是多少，请你帮帮他吧。</p>
+<h3 id="解决算法-1"><a href="#解决算法-1" class="headerlink" title="解决算法"></a>解决算法</h3><blockquote>
+<p>初始化：计算初始数组的 MEX 和 k * MEX(a) 的值。<br>动态规划：定义 dp[i] 表示从数组 a[i] 开始清空剩余数组所需的最小代价。<br>状态转移：dp[i] &#x3D; min(dp[i + 1] + x, k * MEX(a[i:]))：即比较删除第一个元素后的代价和直接删除剩余数组的代价。初始状态 dp[n + 1] &#x3D; 0：表示没有元素时，清空代价为 0。<br>计算 MEX：在遍历时，动态更新当前子数组的 MEX 值。  </p>
+</blockquote>
+<pre><code class="hljs">def find_min_cost(n, a, x, k):
+  # 计算最小代价
+  dp = [0] * (n + 1)
+  mex = [0] * (n + 1)
+
+  # 初始 mex
+  present = set()
+  for i in range(1, n + 1):
+      present.add(a[i - 1])
+      mex[i] = 0
+      while mex[i] in present:
+          mex[i] += 1
+
+  # 动态规划计算最小代价
+  for i in range(n - 1, -1, -1):
+      dp[i] = min(dp[i + 1] + x, k * mex[i + 1])
+
+  return dp[0]
+  
+</code></pre>
+<p>    #ACM模式自行写输入输出</p>
+<h2 id="Q3"><a href="#Q3" class="headerlink" title="Q3:"></a>Q3:</h2><p>小美的彩带是由一条长度为的彩带一直无限循环得到的，彩<br>带的每一个位置都有一个颜色，用Q表示。因此当&gt;n时，ai&#x3D;ai-n.<br>小美每次会从左往后或从右往左剪一段长度为x的彩带，她想知<br>道她每次剪下来的彩带有多少种颜色。</p>
+<h3 id="解决算法-2"><a href="#解决算法-2" class="headerlink" title="解决算法"></a>解决算法</h3><blockquote>
+<p>解题思路<br>确定剪下来的彩带段：<br>假设彩带的基本长度为 n，剪下的长度为 x，则我们要处理的彩带段为从某个起始位置 i 开始的 x 个位置。如果剪下的长度 x 小于 n，则彩带不循环；否则彩带循环，我们需要通过模运算来确定需要遍历的实际彩带段。<br>统计颜色种类：<br>通过集合（Set）来统计剪下来的彩带段中不同颜色的数量。</p>
+</blockquote>
+<pre><code class="hljs">def count_unique_colors(a, n, c, x):
+if c == &#39;L&#39;:
+    # 从左往右剪
+    start = 0
+    end = x
+else:
+    # 从右往左剪
+    start = n - x % n
+    end = n
+
+colors_set = set()
+
+# 将长度投影到彩带上
+for i in range(start, end):
+    colors_set.add(a[i % n])
+
+return len(colors_set)
+
+# 输入处理
+n, q = map(int, input().split())
+a = list(map(int, input().split()))
+
+for _ in range(q):
+    c, x = input().split()
+    x = int(x)
+
+    result = count_unique_colors(a, n, c, x)
+    print(result)
+</code></pre>
 
                 
               </div>
@@ -346,14 +419,14 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>秋招随笔一</div>
+      <div>2024年8月10日	美团笔试（技术卷）</div>
       <div>http://example.com/2024/08/10/Untitled/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>MR F</div>
+          <div>Argi</div>
         </div>
       
       
